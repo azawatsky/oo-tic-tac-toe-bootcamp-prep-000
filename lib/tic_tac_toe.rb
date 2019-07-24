@@ -1,17 +1,5 @@
 =begin
 
-  def turn
-    puts "Please enter 1-9:"
-    input = gets.strip
-    index = input_to_index(input)
-    if valid_move?(index)
-      token = current_player
-      move(index,token)
-      display_board
-    else
-      turn
-    end
-  end
   
   def won?
     WIN_COMBINATIONS.each do |win_combo|
@@ -23,10 +11,6 @@
     end
     return false
   end
-  
-
-  
-end
 =end
 
 class TicTacToe
@@ -76,14 +60,14 @@ class TicTacToe
   def turn_count
     @board.count{|slots| slots == "X" || slots == "O"}
   end
-  
+
   def turn
     puts "Please enter 1-9:"
     input = gets.strip
     index = input_to_index(input)
-    if(valid_move?(index))
-      character = current_player
-      move(index,character)
+    if valid_move?(index)
+      token = current_player
+      move(index,token)
       display_board
     else
       turn
