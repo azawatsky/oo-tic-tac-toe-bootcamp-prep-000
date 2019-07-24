@@ -1,8 +1,5 @@
 =begin
 
-  
-
-  
   def turn
     puts "Please enter 1-9:"
     input = gets.strip
@@ -28,19 +25,6 @@
   end
   
 
-  
-
-  
-  def play
-    until(over?)
-      turn
-    end
-    if(draw?)
-      puts "Cat's Game!"
-    else
-      puts "Congratulations #{winner}!"
-    end
-  end 
   
 end
 =end
@@ -138,7 +122,7 @@ class TicTacToe
       turn_count % 2 == 0 ? "O" : "X"
     end
   end
-
+  
   def play
     until(over?)
       turn
